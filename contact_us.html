@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - TravelBloom</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Extra styling specific to Contact Us page */
+    .about-section {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .about-section h1 {
+      font-size: 50px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .about-section h2 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .about-section input,
+    .about-section textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+    }
+    .about-section button {
+      padding: 10px 20px;
+      background: #00695c;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .about-section button:hover {
+      background: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo-section">
+      <div class="logo-icon">
+        <i class="fa-solid fa-plane"></i>
+      </div>
+      <div class="logo-text">TravelBloom</div>
+    </div>
+    <nav>
+      <a href="./travel_recommendation.html">Home</a>
+      <a href="./about_us.html">About Us</a>
+      <a href="./contact_us.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="hero">
+    <div class="about-section">
+      <h1>CONTACT US</h1>
+      <h2>Feel free to contact us</h2>
+
+      <form id="contactForm">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="10" required placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" onclick="thankyou()">Submit</button>
+      </form>
+
+    </div>
+  </section>
+</body>
+</html>

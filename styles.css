@@ -1,0 +1,218 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+.hero {
+  /* Switch background-image to one of the options, or keep Sample.jpg */
+  background: url("Sample.jpg") no-repeat center center/cover;
+  /* Alternatively:
+     background: url("path/to/your-selected-image.jpg") no-repeat center center/cover;
+  */
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #57858d;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  /* Bigger, no border */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-icon i {
+  font-size: 40px; /* large airplane */
+  color: white;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #1abc9c;
+}
+
+/* Glass Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 6px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.search-box input::placeholder {
+  color: #ddd;
+}
+
+.search-btn, .clear-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-btn {
+  background: #00796b;
+  color: white;
+}
+
+.clear-btn {
+  background: #ccc;
+  color: black;
+}
+
+/* Hero Text */
+.hero-text {
+  position: absolute;
+  top: 17%;
+  left: 5%;
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin-top: 30px;
+  font-size: 25px;
+  line-height: 1.6;
+}
+
+.book-btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background: #00695c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.book-btn:hover {
+  background: #004d40;
+}
+
+/* Social Icons */
+.social-icons {
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 22px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #1abc9c;
+}
+
+
+/* Main Container for search results */
+.searchCondition {
+  position: absolute; /* Position relative to the .hero container */
+  top: 10%;
+  right: 5%;
+  max-width: 400px;
+  max-height: 80%;
+  overflow-y: auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
+  color: white;
+}
+
+/* Style for individual city/destination result */
+.city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.city img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.city h3 {
+  margin: 10px 0 5px;
+}
+
+.city p {
+  font-size: 14px;
+}
+
+/* Ensure the .hero-text and .searchCondition don't overlap with the header */
+.hero {
+  position: relative;
+  height: 100vh;
+  padding-top: 80px; /* Adjust based on header height */
+  color: white;
+}
