@@ -11,7 +11,7 @@ function searchDestination() {
     .then(data => {
       let found = false;
 
-      // 1. Match by country name
+      //Match by country name
       const matchedCountry = data.countries.find(country =>
         country.name.toLowerCase().includes(input)
       );
@@ -29,24 +29,7 @@ function searchDestination() {
         found = true;
       }
 
-      // 2. Match by city name
-      data.countries.forEach(country => {
-        country.cities
-          .filter(city => city.name.toLowerCase().includes(input))
-          .forEach(city => {
-            const cityDiv = document.createElement('div');
-            cityDiv.classList.add('city');
-            cityDiv.innerHTML = `
-              <h3>${city.name}</h3>
-              <img src="${city.imageUrl}" alt="${city.name}" width="200">
-              <p>${city.description}</p>
-            `;
-            resultDiv.appendChild(cityDiv);
-            found = true;
-          });
-      });
-
-      // 3. Match by "beach"/"beaches" or beach names
+      //Match by "beach"/"beaches" or beach names
       if (input.includes("beach")) {
         data.beaches.forEach(beach => {
           const beachDiv = document.createElement('div');
@@ -75,7 +58,7 @@ function searchDestination() {
           });
       }
 
-      // 4. Match by "temple"/"temples" or temple names
+      //Match by "temple"/"temples" or temple names
       if (input.includes("temple")) {
         data.temples.forEach(temple => {
           const templeDiv = document.createElement('div');
@@ -104,7 +87,7 @@ function searchDestination() {
           });
       }
 
-      // 5. Nothing matched
+      //Nothing matched
       if (!found) {
         resultDiv.innerHTML = 'Destination not found.';
       }
